@@ -76,8 +76,9 @@
                 echo "<div>";
                 for($i = 0; $i < count($result); $i++)
                 {
-                    echo"<img src= '" . $result[$i][4] . "'height=300 width=200/>";
-                    echo"<h3>" . $result[$i][0] ."</h3>";
+                    echo"<br></br>";
+                    echo"<img src= '" . $result[$i][4] . "'height=300 width=200/> <h3>" . $result[$i][0] ."</h3> ";
+                    // echo"<h3>" . $result[$i][0] ."</h3>";
                 }
                 echo "</div>";
                     // $image = $row['image_url'];
@@ -95,21 +96,14 @@
                 echo "<div>";
                 for($i = 0; $i < count($result); $i++)
                 {
+                    echo"<br></br>";
                     echo"<img src= '" . $result[$i][3] . "'height=300 width=200/>";
                     echo"<h3>" . $result[$i][0] ."</h3>";
+    
                 }
                 echo "</div>";    
                 
                
-        ?>
-        <?php
-                    $count++;
-                    if($count == 3)
-                    {
-                        echo"<br></br>";
-                        $count = 0;
-                    }
-                
         ?>
     </div>
 </body>
