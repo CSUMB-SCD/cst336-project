@@ -85,6 +85,20 @@
                     // $propName = $row['name'];
                     // $movieGenre = $row['genre'];
                     // $movieYear = $row['year'];
+                    
+                $sql = "SELECT * FROM prop;";
+                $stmt = $dbConn->prepare($sql);
+                $stmt->execute();
+                $count = 0;
+                $result = $stmt->fetchAll();
+                
+                echo "<div>";
+                for($i = 0; $i < count($result); $i++)
+                {
+                    echo"<img src= '" . $result[$i][3] . "'height=300 width=200/>";
+                    echo"<h3>" . $result[$i][0] ."</h3>";
+                }
+                echo "</div>";    
                 
                
         ?>
