@@ -97,7 +97,7 @@
                 echo "<div>";
                 for($i = 0; $i < count($result_prop); $i++)
                 {
-                    echo"<img src= '" . $result_prop[$i][3] . "'height=300 width=200/>";
+                    echo"<img src= '" . $result_prop[$i][2] . "'height=300 width=200/>";
                     echo"<h3>" . $result_prop[$i][0] ."</h3>";
 
     
