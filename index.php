@@ -120,7 +120,8 @@
                     {
                         $sql = "select movie.title, movie.description, movie.year, movie.genre, movie.poster_url, inventory.id, inventory.quantity, inventory.amount from movie inner join inventory_movie on movie.title = inventory_movie.title inner join inventory on inventory_movie.id = inventory.id where movie.genre = " . "'" . $_GET['GenreList'] . "'" . ";";
                     }
-                    else if(isset($_GET['YearList']) && isset($_GET['filter']))
+                    
+                    if(isset($_GET['YearList']) && isset($_GET['filter']))
                     {
                         $sql = "select movie.title, movie.description, movie.year, movie.genre, movie.poster_url, inventory.id, inventory.quantity, inventory.amount from movie inner join inventory_movie on movie.title = inventory_movie.title inner join inventory on inventory_movie.id = inventory.id where movie.year = " . $_GET['YearList'] . ";";
                     }
