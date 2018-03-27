@@ -30,7 +30,7 @@
         <input type="submit" name="search_submit" value="Search" />
         
         
-        <? php
+        <?php
 
 
 
