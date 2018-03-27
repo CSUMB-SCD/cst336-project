@@ -21,16 +21,33 @@
     <div class="container">    
         <h1>Movies and Props Galore</h1>
      
-      <form action="search.php" method="get" />
+      <form action="./index.php" method="GET" />
         <label>
             Search
             <input type="text" name="keywords">
         </label>
        
-        <input type="submit" value="Search" />
+        <input type="submit" name="search_submit" value="Search" />
         
         
-        
+        <? php
+
+
+
+                if(isset($_GET['keywords']) && isset($_GET['search_submit']))
+                {
+                    $sql = "SELECT title, description, year, genre FROM movie
+                    WHERE title LIKE '%{$keywords}%'
+                    OR description LIKE '%{$keywords}%'
+                    OR year LIKE '%{$keywords}%'
+                    OR genre LIKE '%{$keywords}%'";
+                    
+                    $stmt = $dbConn->prepare($sql);
+                    $stmt->execute();
+                    
+                }
+            
+        ?>
         
         
         </form>
