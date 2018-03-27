@@ -131,9 +131,7 @@
                         }
                         
                     }
-
-                    
-                    if(isset($_GET['YearList']) && isset($_GET['filter']))
+                    else if(isset($_GET['YearList']) && isset($_GET['filter']))
                     {
                         if($_GET['sort'] == "ascending")
                         {
