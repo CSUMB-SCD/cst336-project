@@ -112,7 +112,7 @@
                     {
                         $sql = "select movie.title, movie.description, movie.year, movie.genre, movie.poster_url, inventory.id, inventory.quantity, inventory.amount from movie inner join inventory_movie on movie.title = inventory_movie.title inner join inventory on inventory_movie.id = inventory.id order by movie.title DESC;";
                     }
-                    else if(isset($_GET['GenreList']) && isset($_GET['filter']))
+                    else if(isset($_GET['GenreList']) && $_GET['GenreList'] != "none" && isset($_GET['filter']))
                     {
                         if($_GET['sort'] == "ascending")
                         {
@@ -127,7 +127,7 @@
                         }
                         
                     }
-                    else if(isset($_GET['YearList']) && isset($_GET['filter']))
+                    else if(isset($_GET['YearList']) && $_GET['YearList'] != "none" && isset($_GET['filter']))
                     {
                         if($_GET['sort'] == "ascending")
                         {
