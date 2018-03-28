@@ -9,7 +9,7 @@
                         {
                             $_SESSION['movie'] = $result_movie[$i];
                             header("Location: https://moviesandprops.herokuapp.com/detail.php");
-                            exit();
+                            exit;
                         }
                         
                     }
