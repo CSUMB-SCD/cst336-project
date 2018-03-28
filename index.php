@@ -191,7 +191,7 @@
                     
                     for($i = 0; $i < count($result_movie);$i++)
                     {
-                        if(isset($_GET['movies']))
+                        if(isset($_GET["'".$result_movie[$i][0] . "'"]))
                         {
                             $_SESSION['movie'] = $result_movie[$i];
                             var_dump($_SESSION['movie']);
