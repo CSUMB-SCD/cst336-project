@@ -1,4 +1,3 @@
-
 <?php
                     
                     
@@ -10,13 +9,12 @@
                         {
                             $_SESSION['movie'] = $result_movie[$i];
                             header("Location: detail.php");
-                            exit;
+                            exit();
                         }
                         
                     }
                 
 ?>
-                
  <?php
      session_start();
      $servername = "vvfv20el7sb2enn3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
