@@ -194,7 +194,7 @@
                     {
                         if(isset($_GET[$result_movie[$i][0] . '_x']) && isset($_GET[$result_movie[$i][0] . '_y']))
                         {
-                        
+                            var_dump($result_movie[$i][0]);
                             $_SESSION['movie'] = $result_movie[$i];
                             $host  = $_SERVER['HTTP_HOST'];
                             $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
