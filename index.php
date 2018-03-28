@@ -1,4 +1,22 @@
 
+<?php
+                    
+                    
+                    for($i = 0; $i < count($result_movie);$i++)
+                    {
+                        $params_x = 'movie' . ($i+1) . '_x';
+                        $params_y = 'movie' . ($i+1) . '_y';
+                        if(isset($_GET[$params_x],$_GET[$params_y]))
+                        {
+                            $_SESSION['movie'] = $result_movie[$i];
+                            header("Location: detail.php");
+                            exit;
+                        }
+                        
+                    }
+                
+?>
+                
  <?php
      session_start();
      $servername = "vvfv20el7sb2enn3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
@@ -187,23 +205,7 @@
                     </fieldset> 
                 </form>
                     
-                <?php
-                    
-                    
-                    for($i = 0; $i < count($result_movie);$i++)
-                    {
-                        $params_x = 'movie' . ($i+1) . '_x';
-                        $params_y = 'movie' . ($i+1) . '_y';
-                        if(isset($_GET[$params_x],$_GET[$params_y]))
-                        {
-                            $_SESSION['movie'] = $result_movie[$i];
-                            header("Location: detail.php");
-                            exit;
-                        }
-                        
-                    }
                 
-                ?>
                 
                 </div>
                 
