@@ -176,11 +176,7 @@
                 <?php
                     for($i = 0; $i < count($result_movie); $i++)
                     {
-                        // echo '<div style="display:inline-block;margin-left:10px;text-align:center;">';
-                        // echo"<img src= '" . $result_movie[$i][4] . "'height=300 width=200/>";
-                        // echo"<h3>" . $result_movie[$i][0] ."</h3>";
-                        // echo "</div>";
-                        echo "<div style=" . "display:inline-block;" . ">";
+                        echo "<div style=" . "display:inline-block;margin-left:10px;text-align:center;" . ">";
                         echo "<input style=" . "width:200px;height:300px;" . " type=image name=" . $result_movie[$i][0] . " src=" . $result_movie[$i][4] . " >";
                         echo "<br>";
                         echo "<h3>" . $result_movie[$i][0] . "</h3>";
