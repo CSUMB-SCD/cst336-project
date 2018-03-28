@@ -188,10 +188,23 @@
                 </form>
                     
                 <?php
+                    switch (ncurses_getch()){
+                      case NCURSES_KEY_MOUSE:
+                        if (!ncurses_getmouse($mevent)){
+                          if ($mevent["mmask"] & NCURSES_MOUSE_BUTTON1_PRESSED){
+                            $mouse_x = $mevent["x"]; // Save mouse position
+                            $mouse_y = $mevent["y"];
+                          }
+                        }
+                      break;
+                    
+                      default:
+                        /* .... */
+                    }
                     
                     for($i = 0; $i < count($result_movie);$i++)
                     {
-                        if($_GET[$result_movie[$i][0]]['x'] != 0 && $_GET[$result_movie[$i][0]]['y'] != 0)
+                        if($_GET[$result_movie[$i][0]]['x'] == $mouse_x && $_GET[$result_movie[$i][0]]['y'] == $mouse_y)
                         {
                             $_SESSION['movie'] = $result_movie[$i];
                             $host  = $_SERVER['HTTP_HOST'];
