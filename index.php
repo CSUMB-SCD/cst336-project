@@ -194,6 +194,7 @@
                         if(isset($_GET[$result_movie[$i][0]]))
                         {
                             $_SESSION['movie'] = $result_movie[$i];
+                            header('Location:detail.php');
                         }
                     }
                 
