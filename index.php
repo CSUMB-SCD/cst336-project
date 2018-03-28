@@ -182,6 +182,7 @@
                         // echo "</div>";
                         
                         echo "<input style=" . "width:200px;height:300px;" . " type=image name=" . $result_movie[$i][0] . " src=" . $result_movie[$i][4] . " >";
+                        echo "<br>";
                         echo "<h3 style=" . "text-align:center;" . ">" . $result_movie[$i][0] . "</h3>";
                     }
                     
