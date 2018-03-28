@@ -194,7 +194,11 @@
                         if(isset($_GET[$result_movie[$i][0]]))
                         {
                             $_SESSION['movie'] = $result_movie[$i];
-                            header('Location: https://moviesandprops.herokuapp.com/detail.php');
+                            var_dump($_SESSION['movie']);
+                            $host  = $_SERVER['HTTP_HOST'];
+                            $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+                            $extra = 'detail.php';
+                            header("Location: http://$host$uri/$extra");
                             exit();
                         }
                     }
