@@ -1,5 +1,6 @@
 
  <?php
+     session_start();
      $servername = "vvfv20el7sb2enn3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
      $database = "rtt8eikccb51c8d3";
      $dbPort = 3306;
