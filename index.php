@@ -195,6 +195,7 @@
                         {
                             $_SESSION['movie'] = $result_movie[$i];
                             header('Location:detail.php');
+                            exit;
                         }
                     }
                 
