@@ -197,8 +197,8 @@
                         if(isset($_GET[$params_x],$_GET[$params_y]))
                         {
                             $_SESSION['movie'] = $result_movie[$i];
-                            header("Location: https://moviesandprops.herokuapp.com/detail.php");
-                            exit();
+                            header("Location: detail.php");
+                            exit;
                         }
                         
                     }
