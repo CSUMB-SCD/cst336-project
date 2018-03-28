@@ -181,7 +181,7 @@
                         // echo"<h3>" . $result_movie[$i][0] ."</h3>";
                         // echo "</div>";
                         
-                        echo "<input style=" . "width:200;height:300" . " type=text name=" . $result_movie[$i][0] . " src=" . $result_movie[$i][4] . " >";
+                        echo "<input style=" . "width:200;height:300" . " type=image name=" . $result_movie[$i][0] . " src=" . $result_movie[$i][4] . " >";
                     }
                     
                     
