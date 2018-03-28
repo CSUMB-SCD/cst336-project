@@ -194,7 +194,6 @@
                     {
                         $params_x = 'movie' . ($i+1) . '_x';
                         $params_y = 'movie' . ($i+1) . '_y';
-                        var_dump($params_y);
                         if(isset($_GET[$params_x],$_GET[$params_y]))
                         {
                             var_dump($result_movie[$i][0]);
