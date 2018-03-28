@@ -188,24 +188,13 @@
                 </form>
                     
                 <?php
-                    switch (ncurses_getch()){
-                      case NCURSES_KEY_MOUSE:
-                        if (!ncurses_getmouse($mevent)){
-                          if ($mevent["mmask"] & NCURSES_MOUSE_BUTTON1_PRESSED){
-                            $mouse_x = $mevent["x"]; // Save mouse position
-                            $mouse_y = $mevent["y"];
-                          }
-                        }
-                      break;
                     
-                      default:
-                        /* .... */
-                    }
                     
                     for($i = 0; $i < count($result_movie);$i++)
                     {
-                        if($_GET[$result_movie[$i][0]]['x'] == $mouse_x && $_GET[$result_movie[$i][0]]['y'] == $mouse_y)
+                        if(isset($_GET[$result_movie[$i][0] . '_x']) && isset($_GET[$result_movie[$i][0] . '_y']))
                         {
+                        
                             $_SESSION['movie'] = $result_movie[$i];
                             $host  = $_SERVER['HTTP_HOST'];
                             $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
@@ -213,6 +202,7 @@
                             header("Location: http://$host$uri/$extra");
                             exit();
                         }
+                        
                     }
                 
                 ?>
