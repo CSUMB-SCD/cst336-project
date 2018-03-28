@@ -192,7 +192,9 @@
                     
                     for($i = 0; $i < count($result_movie);$i++)
                     {
-                        if(isset($_GET[$result_movie[$i][0] . '_x']) && isset($_GET[$result_movie[$i][0] . '_y']))
+                        $params_x = $result_movie[$i][0] . '_x';
+                        $params_y = $result_movie[$i][0] . '_y';
+                        if(isset($_GET[$params_x],$_GET[$params_y]))
                         {
                             var_dump($result_movie[$i][0]);
                             $_SESSION['movie'] = $result_movie[$i];
