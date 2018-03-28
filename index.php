@@ -171,18 +171,23 @@
                 ?>
                 <div id="movies">
                 <h3><u>Movies</u></h3>
+                <form action="./index.php" method="GET">
+                    <fieldset>
                 <?php
                     for($i = 0; $i < count($result_movie); $i++)
                     {
-                        echo '<div style="display:inline-block;margin-left:10px;text-align:center;">';
-                        echo"<img src= '" . $result_movie[$i][4] . "'height=300 width=200/>";
-                        echo"<h3>" . $result_movie[$i][0] ."</h3>";
-                        echo "</div>";
+                        // echo '<div style="display:inline-block;margin-left:10px;text-align:center;">';
+                        // echo"<img src= '" . $result_movie[$i][4] . "'height=300 width=200/>";
+                        // echo"<h3>" . $result_movie[$i][0] ."</h3>";
+                        // echo "</div>";
                         
+                        echo "<input style=" . "width:200;height:300" . " type=text name=" . $result_movie[$i][0] . " src=" . $result_movie[$i][4] . " >";
                     }
-                 ?>
-                        
                     
+                    
+                 ?>
+                    </fieldset> 
+                </form>
                     
                 
                 </div>
