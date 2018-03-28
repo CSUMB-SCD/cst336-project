@@ -177,7 +177,7 @@
                     for($i = 0; $i < count($result_movie); $i++)
                     {
                         echo "<div style=" . "display:inline-block;margin-left:10px;text-align:center;" . ">";
-                        echo "<input style=" . "width:200px;height:300px;" . " type=image name=" . "'" . $result_movie[$i][0] . "'" . " src=" . $result_movie[$i][4] . " >";
+                        echo "<input style=" . "width:200px;height:300px;" . " type=image name=" . "'" . "movie" . $i+1 . "'" . " src=" . $result_movie[$i][4] . " >";
                         echo "<br>";
                         echo "<h3>" . $result_movie[$i][0] . "</h3>";
                         echo "</div>";
@@ -192,8 +192,8 @@
                     
                     for($i = 0; $i < count($result_movie);$i++)
                     {
-                        $params_x = $result_movie[$i][0] . '_x';
-                        $params_y = $result_movie[$i][0] . '_y';
+                        $params_x = 'movie' . $i+1 . '_x';
+                        $params_y = 'movie' . $i+1 . '_y';
                         if(isset($_GET[$params_x],$_GET[$params_y]))
                         {
                             var_dump($result_movie[$i][0]);
