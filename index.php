@@ -191,7 +191,7 @@
                     
                     for($i = 0; $i < count($result_movie);$i++)
                     {
-                        if(isset($_GET[$result_movie[$i][0]]))
+                        if($_GET[$result_movie[$i][0]]['x'] != 0 && $_GET[$result_movie[$i][0]]['y'] != 0)
                         {
                             $_SESSION['movie'] = $result_movie[$i];
                             $host  = $_SERVER['HTTP_HOST'];
